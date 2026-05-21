@@ -4,8 +4,9 @@ import { ExpressAdapter } from '@nestjs/platform-express';
 import { AppModule } from '../src/app.module';
 import { TransformInterceptor } from '../src/common/interceptors/transform.interceptor';
 import { HttpExceptionFilter } from '../src/common/filters/http-exception.filter';
-import * as express from 'express';
 import type { Request, Response } from 'express';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const express = require('express');
 
 const server = express();
 let isInitialized = false;
